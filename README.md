@@ -1,98 +1,59 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Building Uber-like Services with NestJS Microservices
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![Awesome](https://fptsmartcloud.com/wp-content/uploads/2022/10/what-is-microservice-glossary-01.png)](https://github.com/huuloc2026/)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project demonstrates the foundational steps for building an Uber-like service using a NestJS microservices architecture. It covers setting up the backend infrastructure, database integration, and inter-service communication.
 
-## Description
+## Project Overview
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project serves as a practical guide to building the backend for a ride-hailing application similar to Uber. It focuses on utilizing NestJS, a progressive Node.js framework, and a microservices architecture to create scalable and maintainable services. The initial stages involve setting up the database (MongoDB), defining data models, handling data persistence, and establishing communication between different microservices using TCP.
 
-## Project setup
+## Key Features
 
-```bash
-$ pnpm install
-```
+* **NestJS Microservices:** Demonstrates the implementation of a microservices architecture using NestJS.
+* **MongoDB Integration:** Shows how to connect and interact with a MongoDB database using NestJS Mongoose.
+* **Dockerization:** Provides Docker and Docker Compose configurations for easy setup and management of database services.
+* **Data Modeling:** Defines a schema for storing geographical coordinates.
+* **Request Validation:** Implements validation for incoming request bodies.
+* **Data Persistence:** Demonstrates how to save data (coordinates) to the MongoDB database.
+* **Data Retrieval:** Shows how to fetch data from the database.
+* **TCP Communication:** Illustrates basic inter-service communication using TCP-based NestJS microservices.
+* **Event-Based Communication:** Introduces the concept of defining events for communication between microservices.
 
-## Compile and run the project
+## Tech Stack
 
-```bash
-# development
-$ pnpm run start
+* **[NestJS](https://nestjs.com/)**: A progressive Node.js framework for building efficient and scalable server-side applications.
+* **[MongoDB](https://www.mongodb.com/)**: A NoSQL document database used for storing application data.
+* **[Mongoose](https://mongoosejs.com/)**: An elegant MongoDB object modeling for Node.js.
+* **[Docker](https://www.docker.com/)**: A platform for developing, shipping, and running applications in isolated environments called containers.
+* **[Docker Compose](https://docs.docker.com/compose/)**: A tool for defining and managing multi-container Docker applications.
 
-# watch mode
-$ pnpm run start:dev
+## Prerequisites
 
-# production mode
-$ pnpm run start:prod
-```
+Before you begin, ensure you have the following installed on your system:
 
-## Run tests
+* **[Node.js](https://nodejs.org/)** (version >= 16.0.0)
+* **[npm](https://www.npmjs.com/)** (usually installed with Node.js) or **[yarn](https://yarnpkg.com/)**
+* **[Docker](https://www.docker.com/get-started)** (if you plan to use Docker for database setup)
+* **[Docker Compose](https://docs.docker.com/compose/install/)** (if you plan to use Docker Compose)
 
-```bash
-# unit tests
-$ pnpm run test
+## Setup
 
-# e2e tests
-$ pnpm run test:e2e
+Follow these steps to set up and run the project:
 
-# test coverage
-$ pnpm run test:cov
-```
+### Setting up the NestJS Microservices Project
 
-## Deployment
+## Getting Started
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+1.  Clone this repository (if it were a public repository).
+2.  Follow the steps in the [Setup](#setup) section to configure your environment and database.
+3.  Explore the code structure and the implemented features.
+4.  Run the NestJS application(s) and any associated microservices.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## Contributing
 
-```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Contributions are welcome! If you have suggestions, bug reports, or would like to add new features, please feel free to open an issue or submit a pull request.
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+[MIT](LICENSE) (Replace with your project's license if applicable)
