@@ -1,4 +1,4 @@
-# Building Uber-like Services with NestJS Microservices
+# Building Uber Services with NestJS Microservices
 
 [![Awesome](https://fptsmartcloud.com/wp-content/uploads/2022/10/what-is-microservice-glossary-01.png)](https://github.com/huuloc2026/)
 
