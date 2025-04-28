@@ -10,38 +10,74 @@ This project serves as a practical guide to building the backend for a ride-hail
 
 ## Key Features
 
-* **NestJS Microservices:** Demonstrates the implementation of a microservices architecture using NestJS.
-* **MongoDB Integration:** Shows how to connect and interact with a MongoDB database using NestJS Mongoose.
-* **Dockerization:** Provides Docker and Docker Compose configurations for easy setup and management of database services.
-* **Data Modeling:** Defines a schema for storing geographical coordinates.
-* **Request Validation:** Implements validation for incoming request bodies.
-* **Data Persistence:** Demonstrates how to save data (coordinates) to the MongoDB database.
-* **Data Retrieval:** Shows how to fetch data from the database.
-* **TCP Communication:** Illustrates basic inter-service communication using TCP-based NestJS microservices.
-* **Event-Based Communication:** Introduces the concept of defining events for communication between microservices.
+- **NestJS Microservices:** Demonstrates the implementation of a microservices architecture using NestJS.
+- **MongoDB Integration:** Shows how to connect and interact with a MongoDB database using NestJS Mongoose.
+- **Dockerization:** Provides Docker and Docker Compose configurations for easy setup and management of database services.
+- **Data Modeling:** Defines a schema for storing geographical coordinates.
+- **Request Validation:** Implements validation for incoming request bodies.
+- **Data Persistence:** Demonstrates how to save data (coordinates) to the MongoDB database.
+- **Data Retrieval:** Shows how to fetch data from the database.
+- **TCP Communication:** Illustrates basic inter-service communication using TCP-based NestJS microservices.
+- **Event-Based Communication:** Introduces the concept of defining events for communication between microservices.
 
 ## Tech Stack
 
-* **[NestJS](https://nestjs.com/)**: A progressive Node.js framework for building efficient and scalable server-side applications.
-* **[MongoDB](https://www.mongodb.com/)**: A NoSQL document database used for storing application data.
-* **[Mongoose](https://mongoosejs.com/)**: An elegant MongoDB object modeling for Node.js.
-* **[Docker](https://www.docker.com/)**: A platform for developing, shipping, and running applications in isolated environments called containers.
-* **[Docker Compose](https://docs.docker.com/compose/)**: A tool for defining and managing multi-container Docker applications.
+- **[NestJS](https://nestjs.com/)**: A progressive Node.js framework for building efficient and scalable server-side applications.
+- **[MongoDB](https://www.mongodb.com/)**: A NoSQL document database used for storing application data.
+- **[Mongoose](https://mongoosejs.com/)**: An elegant MongoDB object modeling for Node.js.
+- **[Docker](https://www.docker.com/)**: A platform for developing, shipping, and running applications in isolated environments called containers.
+- **[Docker Compose](https://docs.docker.com/compose/)**: A tool for defining and managing multi-container Docker applications.
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
-* **[Node.js](https://nodejs.org/)** (version >= 16.0.0)
-* **[npm](https://www.npmjs.com/)** (usually installed with Node.js) or **[yarn](https://yarnpkg.com/)**
-* **[Docker](https://www.docker.com/get-started)** (if you plan to use Docker for database setup)
-* **[Docker Compose](https://docs.docker.com/compose/install/)** (if you plan to use Docker Compose)
+- **[Node.js](https://nodejs.org/)** (version >= 16.0.0)
+- **[npm](https://www.npmjs.com/)** (usually installed with Node.js) or **[yarn](https://yarnpkg.com/)**
+- **[Docker](https://www.docker.com/get-started)** (if you plan to use Docker for database setup)
+- **[Docker Compose](https://docs.docker.com/compose/install/)** (if you plan to use Docker Compose)
 
 ## Setup
 
 Follow these steps to set up and run the project:
 
 ### Setting up the NestJS Microservices Project
+
+```bash
+# MongoDB Configuration
+MONGO_HOST=mongo
+MONGO_PORT=27017
+MONGO_ROOT_USERNAME=root
+MONGO_ROOT_PASSWORD=root
+MONGO_DATABASE=your_app_db # Replace with your desired database name
+
+# RabbitMQ Configuration
+RABBITMQ_HOST=rabbitmq
+RABBITMQ_PORT=5672
+RABBITMQ_MANAGEMENT_PORT=15672
+RABBITMQ_DEFAULT_USER=guest
+RABBITMQ_DEFAULT_PASS=guest
+
+# PostgreSQL Rider Database Configuration
+POSTGRES_RIDER_HOST=postgres_rider
+POSTGRES_RIDER_PORT=5432
+POSTGRES_RIDER_USER=postgres
+POSTGRES_RIDER_PASSWORD=root
+POSTGRES_RIDER_DB=riders_db
+
+# PostgreSQL Authentication Database Configuration
+POSTGRES_AUTH_HOST=postgres_auth
+POSTGRES_AUTH_PORT=5432
+POSTGRES_AUTH_USER=postgres
+POSTGRES_AUTH_PASSWORD=root
+POSTGRES_AUTH_DB=auth_db
+
+# Add any other environment variables your application needs below
+# Example:
+# API_KEY=your_secret_api_key
+# DEBUG=True
+
+```
 
 ## Getting Started
 
@@ -57,3 +93,4 @@ Contributions are welcome! If you have suggestions, bug reports, or would like t
 ## License
 
 [MIT](LICENSE) (Replace with your project's license if applicable)
+
